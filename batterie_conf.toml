@@ -1,0 +1,149 @@
+[trigger]
+
+[trigger.percentage.critical] # create your own trigger for your favourite percent
+trigger_percent = 5 # percent
+trigger_condition = "discharging" # charging, discharging, both
+image = "battery/critical.png" # none, custom
+massage = "Critical %%" # %% is the percent
+massage_type = "2" # 0 = info, 1 = warning, 2 = critical
+display_time = "0" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+[trigger.percentage.10discharging]
+trigger_percent = 10
+trigger_condition = "discharging"
+image = "battery/discharging10percent.png"
+massage = "Discharging %%" # %% is the percent
+massage_type = "2" # 0 = info, 1 = warning, 2 = critical
+display_time = "30000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+[trigger.percentage.20discharging]
+trigger_percent = 20
+trigger_condition = "discharging"
+image = "battery/discharging20percent.png"
+massage = "Discharging %%" # %% is the percent
+massage_type = "1" # 0 = info, 1 = warning, 2 = critical
+display_time = "5000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+[trigger.percentage.50discharging]
+trigger_percent = 50
+trigger_condition = "discharging"
+image = "battery/discharging50percent.png"
+massage = "Discharging %%" # %% is the percent
+massage_type = "0" # 0 = info, 1 = warning, 2 = critical
+display_time = "5000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+[trigger.percentage.75discharging]
+trigger_percent = 75
+trigger_condition = "discharging"
+image = "battery/discharging75percent.png"
+massage = "Discharging %%" # %% is the percent
+massage_type = "0" # 0 = info, 1 = warning, 2 = critical
+display_time = "5000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+[trigger.percentage.100]
+trigger_percent = 100
+trigger_condition = "both"
+image = "battery/full.png"
+massage = "%%" # %% is the percent
+massage_type = "0" # 0 = info, 1 = warning, 2 = critical
+display_time = "5000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+[trigger.percentage.10charging]
+trigger_percent = 10
+trigger_condition = "charging"
+image = "battery/charging10percent.png"
+massage = "Charging %%" # %% is the percent
+massage_type = "0" # 0 = info, 1 = warning, 2 = critical
+display_time = "5000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+[trigger.percentage.20charging]
+trigger_percent = 20
+trigger_condition = "charging"
+image = "battery/charging20percent.png"
+massage = "Charging %%" # %% is the percent
+massage_type = "0" # 0 = info, 1 = warning, 2 = critical
+display_time = "5000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+[trigger.percentage.50charging]
+trigger_percent = 50
+trigger_condition = "charging"
+image = "battery/charging50percent.png"
+massage = "Charging %%" # %% is the percent
+massage_type = "0" # 0 = info, 1 = warning, 2 = critical
+display_time = "5000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+[trigger.percentage.75charging]
+trigger_percent = 75
+trigger_condition = "charging"
+image = "battery/charging75percent.png"
+massage = "Charging %%" # %% is the percent
+massage_type = "0" # 0 = info, 1 = warning, 2 = critical
+display_time = "5000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+
+[trigger.chargingstate.charging] # charging and discharging is possible
+0 = "battery/charging0percent.png"
+5 = "battery/charging5percent.png"
+10 = "battery/charging10percent.png"
+20 = "battery/charging20percent.png"
+50 = "battery/charging50percent.png"
+75 = "battery/charging75percent.png"
+100 = "battery/chargingfull.png"
+
+display = "nearest to"# up,down, nearest to (single picture for all charging %)
+massage = "Charching %%" # %% is the percent
+massage_type = "1" # 0 = info, 1 = warning, 2 = critical
+display_time = "5000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+[trigger.chargingstate.discharging] # charging and discharging is possible
+5 = "battery/critical.png"
+10 = "battery/discharging10percent.png"
+20 = "battery/discharging20percent.png"
+50 = "battery/discharging50percent.png"
+75 = "battery/discharging75percent.png"
+100 = "battery/full.png"
+
+display = "nearest to"# up,down, nearest to (single picture for all charging %)
+massage = "Discharging %%" # %% is the percent
+massage_type = "1" # 0 = info, 1 = warning, 2 = critical
+display_time = "5000" # 0 = forever, else in milliseconds
+command = "default" # default(runs dunstify), none(does nothing (why do you run this trigger, to log???)) or custom (begin with "&& " and you run your command + the default command)
+log = true
+
+
+[config]
+log = "true" # "true" or "false" or "custom" (element specific)
+log_to = "file" # file, console or both
+file_path = "battery-log.txt"
+
+update_interval = 1 # in seconds
+dunstify_id = 17
+app_name = "Battery"
+
+
+
+
+
+
